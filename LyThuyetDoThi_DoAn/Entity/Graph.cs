@@ -11,7 +11,7 @@ namespace LyThuyetDoThi_DoAn.Entity
         private int[,] adjacencyMatrix; // Mảng hai chiều để lưu trữ ma trận kề
         private int numberOfVertices; // Số đỉnh của đồ thị
         
-        //Constructor
+        //Constructor -- 
         public Graph(int numberOfVertices)
         {
             this.numberOfVertices = numberOfVertices;
