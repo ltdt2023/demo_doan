@@ -10,7 +10,8 @@ namespace LyThuyetDoThi_DoAn.Entity
     {
         private int[,] adjacencyMatrix; // Mảng hai chiều để lưu trữ ma trận kề
         private int numberOfVertices; // Số đỉnh của đồ thị
-
+        
+        //Constructor
         public Graph(int numberOfVertices)
         {
             this.numberOfVertices = numberOfVertices;
@@ -54,7 +55,6 @@ namespace LyThuyetDoThi_DoAn.Entity
         public void AddEdge(int source, int destination, int weight)
         {
             adjacencyMatrix[source, destination] = weight;
-
         }
     }
 }
