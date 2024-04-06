@@ -18,6 +18,18 @@ namespace LyThuyetDoThi_DoAn.Entity
             adjacencyMatrix = new int[numberOfVertices, numberOfVertices];
         }
 
+        //getter for numberOfVertices
+        public int NumberOfVertices
+        {
+            get { return numberOfVertices; }
+        }
+
+        //getter for AdjacencyMatrix
+        public int[,] AdjacencyMatrix
+        {
+            get { return adjacencyMatrix; }
+        }
+
         //Hàm in danh sách kề
         public void InDanhSachKe()
         {
