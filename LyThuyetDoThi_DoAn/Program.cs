@@ -20,7 +20,6 @@ namespace MyApp
                     doThi.InDanhSachKe();
                     doThi.InMaTranKe();
                 }
-                /*XacDinhLienThongManh.isValidated(doThi);*/
 
             }
             catch (FileNotFoundException e)
