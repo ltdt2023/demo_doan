@@ -50,10 +50,7 @@ namespace MyApp
             Console.WriteLine("---------------------------------------------------");
             Console.WriteLine("\nYeu cau so 2: Xac dinh thanh phan lien thong manh");
 
-            if (graph.IsUnDirected(graph.adjacencyMatrix))
-            {
-                Console.WriteLine("Do thi la do thi vo huong khong canh boi va khong canh khuyen => Thoa dieu kien cua yeu cau 2!");
-
+            
                 Validation validation = new Validation();
                 FindStrongPart findStrongPart = new FindStrongPart(graph);
                 if (FindStrongPart.isValidated(graph))
@@ -61,18 +58,8 @@ namespace MyApp
                     validation.display(graph);
                     findStrongPart.display();
                 }
-            }
-            else
-            {
-                Console.WriteLine("Do thi khong thoa man dieu kien de xet yeu cau 2.");
-                Console.WriteLine("=> Do thi la do thi co huong.");
-
-                if (graph.ChuaCanhBoiTrongCoHuong(graph.adjacencyMatrix))
-                {
-                    Console.WriteLine("=> Do thi chua canh boi.");
-                }
-
-            }
+            
+            
 
 
         }

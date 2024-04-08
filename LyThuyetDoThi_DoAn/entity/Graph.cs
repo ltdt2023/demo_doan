@@ -117,13 +117,13 @@ namespace LyThuyetDoThi_DoAn.Entity
                 // Kiểm tra cạnh bội
                 for (int j = 0; j < numberOfVertices; j++)
                 {
-                    if (newAdjacencyMatrix[i, j] == newAdjacencyMatrix[j, i])
+                    if (newAdjacencyMatrix[i, j] == newAdjacencyMatrix[j, i] && adjacencyMatrix[i, j] != 0 && adjacencyMatrix[j, i] != 0)
                     {
                         return true; // Đồ thị chứa cạnh bội
                     }
                 }
             }
-            return false; // Đồ thị không chứa cạnh khuyên hoặc cạnh bội
+            return false; // Đồ thị không chứa cạnh bội
         }
 
         //Hàm đếm số cạnh của đồ thị vô hướng 
