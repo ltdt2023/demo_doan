@@ -1,7 +1,8 @@
 using System;
 using LyThuyetDoThi_DoAn.Entity;
 using LyThuyetDoThi_DoAn.ReadFile;
-using LyThuyetDoThi_DoAn.XacDinhLienThongManh;
+using LyThuyetDoThi_DoAn.Validation;
+using LyThuyetDoThi_DoAn.FindStrongPart;
 
 
 namespace MyApp
@@ -20,7 +21,8 @@ namespace MyApp
                     doThi.InDanhSachKe();
                     doThi.InMaTranKe();
                 }
-
+                Console.WriteLine();
+                requestNumberTwo(doThi);
             }
             catch (FileNotFoundException e)
             {
@@ -30,6 +32,18 @@ namespace MyApp
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey(); // This waits for a key press before exiting
+        }
+
+        public static void requestNumberTwo(Graph graph)
+        {
+            Console.WriteLine("Y/c so 2:");
+            Validation validation = new Validation();
+            FindStrongPart findStrongPart = new FindStrongPart(graph);
+            if (FindStrongPart.isValidated(graph))
+            {
+                validation.display(graph);
+                findStrongPart.display();
+            }
         }
     }
 

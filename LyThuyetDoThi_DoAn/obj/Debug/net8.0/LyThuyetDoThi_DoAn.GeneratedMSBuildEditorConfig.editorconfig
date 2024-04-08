@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LyThuyetDoThi_DoAn
-build_property.ProjectDir = C:\Hao\University_IT\LTDT\DO_AN\demo_doan\LyThuyetDoThi_DoAn\
+build_property.ProjectDir = /Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
