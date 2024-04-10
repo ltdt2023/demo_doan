@@ -8,24 +8,26 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/fika/.nuget/packages/": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn.csproj",
       "projectName": "LyThuyetDoThi_DoAn",
-      "projectPath": "/Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj",
-      "packagesPath": "/Users/fika/.nuget/packages/",
-      "outputPath": "/Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/obj/",
+      "projectPath": "C:\\Users\\ADMIN\\source\\repos\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\source\\repos\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/fika/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -38,11 +40,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -64,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
