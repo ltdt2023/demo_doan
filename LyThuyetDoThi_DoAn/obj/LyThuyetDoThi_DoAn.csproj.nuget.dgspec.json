@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj": {}
+    "/Users/ngannguyen/Downloads/Ngan_LTDT/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj": {}
   },
   "projects": {
-    "/Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj": {
+    "/Users/ngannguyen/Downloads/Ngan_LTDT/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj",
+        "projectUniqueName": "/Users/ngannguyen/Downloads/Ngan_LTDT/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj",
         "projectName": "LyThuyetDoThi_DoAn",
-        "projectPath": "/Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj",
-        "packagesPath": "/Users/fika/.nuget/packages/",
-        "outputPath": "/Users/fika/Documents/workspace/LTDT_DOAN/src/demo_doan/LyThuyetDoThi_DoAn/obj/",
+        "projectPath": "/Users/ngannguyen/Downloads/Ngan_LTDT/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj",
+        "packagesPath": "/Users/ngannguyen/.nuget/packages/",
+        "outputPath": "/Users/ngannguyen/Downloads/Ngan_LTDT/demo_doan/LyThuyetDoThi_DoAn/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/fika/.nuget/NuGet/NuGet.Config"
+          "/Users/ngannguyen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
