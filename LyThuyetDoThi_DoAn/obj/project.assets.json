@@ -8,16 +8,11 @@
     "net8.0": []
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
-=======
-    "/Users/ngannguyen/.nuget/packages/": {}
->>>>>>> 813367b807f174c0e2eb6ba9c31fa35df75abb0d
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn.csproj",
       "projectName": "LyThuyetDoThi_DoAn",
       "projectPath": "C:\\Users\\ADMIN\\source\\repos\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn\\LyThuyetDoThi_DoAn.csproj",
@@ -27,16 +22,6 @@
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-      "projectUniqueName": "/Users/ngannguyen/Downloads/Ngan_LTDT/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj",
-      "projectName": "LyThuyetDoThi_DoAn",
-      "projectPath": "/Users/ngannguyen/Downloads/Ngan_LTDT/demo_doan/LyThuyetDoThi_DoAn/LyThuyetDoThi_DoAn.csproj",
-      "packagesPath": "/Users/ngannguyen/.nuget/packages/",
-      "outputPath": "/Users/ngannguyen/Downloads/Ngan_LTDT/demo_doan/LyThuyetDoThi_DoAn/obj/",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "/Users/ngannguyen/.nuget/NuGet/NuGet.Config"
->>>>>>> 813367b807f174c0e2eb6ba9c31fa35df75abb0d
       ],
       "originalTargetFrameworks": [
         "net8.0"

@@ -17,6 +17,8 @@ namespace LyThuyetDoThi_DoAn.services.YeuCau5
 
             bool hasEulerCycle;
 
+            int[,] tempAdjacencyMatrix = graph.TransformWeights(graph.adjacencyMatrix);
+
             if (graph.numberOfVertices == 1) //đồ thị không có cạnh được coi là đồ thị Euler vì không có cạnh nào để đi qua.
             {
                 return true;
@@ -25,16 +27,16 @@ namespace LyThuyetDoThi_DoAn.services.YeuCau5
             for (int i = 0; i < graph.numberOfVertices; i++)
             {
                 int degree = 0;
+
                 for (int j = 0; j < graph.numberOfVertices; j++)
                 {
-                    degree += graph.adjacencyMatrix[i, j]; // Tính toán bậc của đỉnh
+                    degree += tempAdjacencyMatrix[i, j]; // Tính toán bậc của đỉnh
                 }
                 if (degree % 2 != 0) //Kiểm tra bậc đỉnh có phải bậc lẻ hay bậc chẵn
                 {
                     oddDegreeCount++; // bậc lẻ thì count lên + 1
                 }
             }
-
             if (oddDegreeCount == 0)
             {
                 hasEulerCycle = true;
@@ -51,19 +53,21 @@ namespace LyThuyetDoThi_DoAn.services.YeuCau5
         {
             int oddDegreeCount = 0;
             bool hasEulerPath;
+            int[,] tempAdjacencyMatrix = graph.TransformWeights(graph.adjacencyMatrix);
 
             for (int i = 0; i < graph.numberOfVertices; i++)
             {
                 int degree = 0;
                 for (int j = 0; j < graph.numberOfVertices; j++)
                 {
-                    degree += graph.adjacencyMatrix[i, j];
+                    degree += tempAdjacencyMatrix[i, j];
                 }
                 if (degree % 2 != 0)
                 {
                     oddDegreeCount++;
                 }
             }
+
 
             if (oddDegreeCount <= 2)
             {
@@ -154,6 +158,7 @@ namespace LyThuyetDoThi_DoAn.services.YeuCau5
                     break;
                 }
             }
+            Console.WriteLine();
         }
 
         // Loại bỏ cạnh uv từ ma trận kề
@@ -181,6 +186,7 @@ namespace LyThuyetDoThi_DoAn.services.YeuCau5
 
             //Tìm chu trình Euler
             graph.FindFleuryCycle(startVertex);
+            Console.WriteLine();
         }
 
 
@@ -200,6 +206,7 @@ namespace LyThuyetDoThi_DoAn.services.YeuCau5
 
             // Tìm đường đi Euler
             graph.FindEulerPath(startVertex);
+            Console.WriteLine();
         }
     }
 }
