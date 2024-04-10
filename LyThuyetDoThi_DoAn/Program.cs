@@ -4,6 +4,7 @@ using LyThuyetDoThi_DoAn.ReadFile;
 using LyThuyetDoThi_DoAn.Validation;
 using LyThuyetDoThi_DoAn.FindStrongPart;
 using LyThuyetDoThi_DoAn.services.YeuCau1;
+using LyThuyetDoThi_DoAn.services.YeuCau4;
 using LyThuyetDoThi_DoAn.services.YeuCau5;
 
 
@@ -32,6 +33,8 @@ namespace MyApp
                 requestNumberOne(doThi);
                 Console.WriteLine();
                 requestNumberTwo(doThi);
+                Console.WriteLine();
+                requestNumberFour(doThi);
                 Console.WriteLine();
                 requestNumberFive(doThi);
 
@@ -117,6 +120,14 @@ namespace MyApp
                 }
 
             }
+        }
+
+          public static void requestNumberFour(Graph graph)
+        {
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("\nYeu cau 4: Tim duong di ngan nhat");
+            FindShortedPath GraphInput = new FindShortedPath(graph);
+            GraphInput.Check();
         }
 
         public static void requestNumberFive(Graph graph)
