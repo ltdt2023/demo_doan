@@ -11,8 +11,6 @@ namespace LyThuyetDoThi_DoAn.Validation
 {
     public class Validation 
     {
-        private Graph graph;
-
         private List<int>[] adjacency;
 
         public Validation() { }
@@ -142,11 +140,12 @@ namespace LyThuyetDoThi_DoAn.Validation
 
         public void display(Graph graph)
         {
-            if (isStrongConnected(graph))
+            Graph new_graph = (Graph) graph.Clone();
+            if (isStrongConnected(new_graph))
                 Console.WriteLine("Do thi lien thong manh");
-            else if (isPartConnected(graph))
+            else if (isPartConnected(new_graph))
                 Console.WriteLine("Do thi lien thong tung phan");
-            else if (isWeakConnected(graph))
+            else if (isWeakConnected(new_graph))
                 Console.WriteLine("Do thi lien thong yeu");
             else
                 Console.WriteLine("Do thi khong lien thong");
