@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace LyThuyetDoThi_DoAn.Entity
 {
-    public class Graph
+    public class Graph : ICloneable
     {
         public int[,] adjacencyMatrix; // Mảng hai chiều để lưu trữ ma trận kề
         public int numberOfVertices; // Số đỉnh của đồ thị
-        
+
         //Constructor -- 
         public Graph(int numberOfVertices)
         {
             this.numberOfVertices = numberOfVertices;
             adjacencyMatrix = new int[numberOfVertices, numberOfVertices];
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
 
         //getter for numberOfVertices
@@ -332,6 +337,6 @@ namespace LyThuyetDoThi_DoAn.Entity
             }
             return degree % 2 != 0;
         }
-    
+
     }
 }

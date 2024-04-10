@@ -22,7 +22,7 @@ namespace LyThuyetDoThi_DoAn.FindStrongPart
 
         public FindStrongPart(Graph graph_input)
         {
-            graph = graph_input;
+            graph = (Graph) graph_input.Clone();
             result = new List<int>();
 
             listPart = new List<List<int>>();

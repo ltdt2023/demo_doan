@@ -18,6 +18,7 @@ namespace MyApp
                 string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../"));
                 string filePath = Path.Combine(projectRoot, "resource", "text.txt");
                 Graph doThi = ReadInputFile.DocDoThiTuFile(filePath);
+                Graph doThi_2 = ReadInputFile.DocDoThiTuFile(filePath);
                 if (doThi != null)
                 {
                     Console.WriteLine("In danh sach ke: ");
