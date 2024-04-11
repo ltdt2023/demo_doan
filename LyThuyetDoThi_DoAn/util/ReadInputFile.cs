@@ -33,15 +33,12 @@ namespace LyThuyetDoThi_DoAn.ReadFile
                         if (visited.Contains(result[j])) // Kiem tra do thi vo huong co canh boi
                         {
                             throw new Exception("Day la do thi vo huong co canh boi");
-                        } else if (result[j] == i) // Kiem tra do thi vo huong co canh khuyen
-                        {
-                            throw new Exception("Day la do thi co canh khuyen");
-                        }
+                        } // Kiem tra do thi vo huong co canh khuyen
                         else
                         {
                             visited.Add(result[j]);
                             int dinhKe = result[j]; // Đọc đỉnh kề
-                            int trongSo = result[j + 1]; // Đọc trọng số
+                            int trongSo = result[j +1]; // Đọc trọng số
                             doThi.AddEdge(i, dinhKe, trongSo); // Thêm cạnh vào ma trận kề của đồ thị
                         }
                     }

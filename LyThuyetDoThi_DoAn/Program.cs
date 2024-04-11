@@ -61,7 +61,7 @@ namespace MyApp
             Console.WriteLine("---------------------------------------------------");
             Console.WriteLine("\nYeu cau 1: Nhan dien mot so dang do thi dac biet");
 
-            if (graph.IsUnDirected(graph.adjacencyMatrix))
+            if (graph.IsUnDirected(graph.adjacencyMatrix)== true && graph.KiemTraCanhKhuyen(graph)== false)
             {
                 Console.WriteLine("Do thi la do thi vo huong khong canh boi va khong canh khuyen => Thoa dieu kien cua yeu cau 1!");
 
@@ -99,12 +99,15 @@ namespace MyApp
             }
             else
             {
-                Console.WriteLine("Do thi khong thoa man dieu kien de xet yeu cau 1.");
-                Console.WriteLine("=> Do thi la do thi co huong.");
+                if (!graph.IsUnDirected(graph.adjacencyMatrix)) {
+                    Console.WriteLine("Do thi khong thoa man dieu kien de xet yeu cau 1.");
+                    Console.WriteLine("=> Do thi la do thi co huong.");
+                }
 
-                if (graph.ChuaCanhBoiTrongCoHuong(graph.adjacencyMatrix))
+                if (graph.KiemTraCanhKhuyen(graph))
                 {
-                    Console.WriteLine("=> Do thi chua canh boi.");
+                    Console.WriteLine("Do thi khong thoa man dieu kien de xet yeu cau 1.");
+                    Console.WriteLine("=> Do thi chua canh khuyen.");
                 }
 
             }
@@ -118,7 +121,7 @@ namespace MyApp
 
             Validation validation = new Validation();
             FindStrongPart findStrongPart = new FindStrongPart(graph);
-            if (FindStrongPart.isValidated(graph))
+            if (FindStrongPart.isValidated(graph) && graph.KiemTraCanhKhuyen(graph))
             {
                 validation.display(graph);
                 findStrongPart.display();

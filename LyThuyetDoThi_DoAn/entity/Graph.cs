@@ -75,6 +75,7 @@ namespace LyThuyetDoThi_DoAn.Entity
         }
 
 
+
         //Hàm chuyển đổi trọng số Ma trận kề 
         public int[,] TransformWeights(int[,] adjacencyMatrix)
         {
@@ -108,6 +109,20 @@ namespace LyThuyetDoThi_DoAn.Entity
                 }
             }
             return true; // Nếu tất cả các cặp cạnh đều đối xứng, đồ thị vô hướng
+        }
+
+        public bool KiemTraCanhKhuyen(Graph graph)
+        {
+            int[,] matrix = graph.TransformWeights(graph.adjacencyMatrix); //Chuyển đổi sang ma trận kề
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                if (matrix[i, i] != 0)
+                {
+                    return true; // Nếu phần tử trên đường chéo chính khác 0, đồ thị chứa cạnh khuyên
+                }
+            }
+            return false; // Nếu không có phần tử trên đường chéo chính khác 0, đồ thị không chứa cạnh khuyên
         }
 
 
