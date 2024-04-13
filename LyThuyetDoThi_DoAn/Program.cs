@@ -121,7 +121,7 @@ namespace MyApp
 
             Validation validation = new Validation();
             FindStrongPart findStrongPart = new FindStrongPart(graph);
-            if (FindStrongPart.isValidated(graph) && graph.KiemTraCanhKhuyen(graph))
+            if (FindStrongPart.isValidated(graph) && !graph.KiemTraCanhKhuyen(graph))
             {
                 validation.display(graph);
                 findStrongPart.display();

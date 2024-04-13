@@ -20,7 +20,16 @@ namespace LyThuyetDoThi_DoAn.Entity
 
         public object Clone()
         {
-            return this.MemberwiseClone();
+            Graph clone = new Graph(this.numberOfVertices);
+            for (int i = 0; i < numberOfVertices; i++)
+            {
+                for (int j = 0; j < numberOfVertices; j++)
+                {
+                    clone.adjacencyMatrix[i, j] = this.adjacencyMatrix[i, j];
+                }
+            }
+
+            return clone;
         }
 
         //getter for numberOfVertices
