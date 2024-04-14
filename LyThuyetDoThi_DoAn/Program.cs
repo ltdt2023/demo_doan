@@ -24,6 +24,7 @@ namespace MyApp
                 Graph doThi_3 = ReadInputFile.DocDoThiTuFile(filePath);
                 Graph doThi_4 = ReadInputFile.DocDoThiTuFile(filePath);
                 Graph doThi_5 = ReadInputFile.DocDoThiTuFile(filePath);
+
                 if (doThi != null)
                 {
                     Console.WriteLine("In danh sach ke: ");
@@ -60,7 +61,7 @@ namespace MyApp
         {
             Console.WriteLine("---------------------------------------------------");
             Console.WriteLine("\nYeu cau 1: Nhan dien mot so dang do thi dac biet");
-
+            
             if (graph.IsUnDirected(graph.adjacencyMatrix)== true && graph.KiemTraCanhKhuyen(graph)== false)
             {
                 Console.WriteLine("Do thi la do thi vo huong khong canh boi va khong canh khuyen => Thoa dieu kien cua yeu cau 1!");

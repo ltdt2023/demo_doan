@@ -228,11 +228,10 @@ namespace LyThuyetDoThi_DoAn.Entity
 
 
 
-        // Hàm xác định chu trình Euler xuất phát từ đỉnh source với quy ước chọn hướng đi bằng thuật toán Fleury
         public void FindFleuryCycle(int source)
         {
-            // Dictionary để lưu các cạnh đã được thăm
-            Dictionary<string, bool> visitedEdges = new Dictionary<string, bool>();
+            // Ma trận boolean để lưu trạng thái thăm của các cạnh
+            bool[,] visitedEdges = new bool[numberOfVertices, numberOfVertices];
 
             // List để lưu chu trình Euler
             List<int> eulerCycleList = new List<int>();
@@ -249,7 +248,7 @@ namespace LyThuyetDoThi_DoAn.Entity
                 List<int> neighbors = new List<int>();
                 for (int nextVertex = 0; nextVertex < numberOfVertices; nextVertex++)
                 {
-                    if (adjacencyMatrix[currentVertex, nextVertex] > 0 && !visitedEdges.ContainsKey(currentVertex + "-" + nextVertex))
+                    if (adjacencyMatrix[currentVertex, nextVertex] > 0 && !visitedEdges[currentVertex, nextVertex])
                     {
                         neighbors.Add(nextVertex);
                     }
@@ -260,10 +259,11 @@ namespace LyThuyetDoThi_DoAn.Entity
                 foreach (int nextVertex in neighbors)
                 {
                     // Nếu có cạnh từ currentVertex đến nextVertex và cạnh chưa được thăm
-                    if (adjacencyMatrix[currentVertex, nextVertex] > 0 && !visitedEdges.ContainsKey(currentVertex + "-" + nextVertex))
+                    if (adjacencyMatrix[currentVertex, nextVertex] > 0 && !visitedEdges[currentVertex, nextVertex])
                     {
                         // Đánh dấu cạnh đã được thăm
-                        visitedEdges[currentVertex + "-" + nextVertex] = true;
+                        visitedEdges[currentVertex, nextVertex] = true;
+                        visitedEdges[nextVertex, currentVertex] = true; // Vì đồ thị vô hướng
 
                         // Thêm nextVertex vào chu trình
                         eulerCycleList.Add(nextVertex);
@@ -281,7 +281,6 @@ namespace LyThuyetDoThi_DoAn.Entity
                 }
 
                 // Nếu không tìm thấy cạnh nào đi từ currentVertex
-
                 if (!edgeFound)
                 {
                     // Lấy đỉnh cuối cùng từ List và in ra
@@ -291,6 +290,7 @@ namespace LyThuyetDoThi_DoAn.Entity
                 }
             }
         }
+
 
 
         public void FindEulerPath(int source)
